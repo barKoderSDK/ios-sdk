@@ -47,13 +47,19 @@ class ViewController: UIViewController {
 }
 ```
 
+## Licensing
+
+The SDK will scan barcodes even without a license, however, certain characters will be marked with asterisks. To avoid this you can create a trial license or even a production license. Follow [barkoder.com/register](https://barkoder.com/register/ref=github) and create a trial license today.
+
+
 ## Create Barkoder Config
 Setup the Barkoder Config per your needs:
 
+In order to perform scanning, config property needs to be properly set
+As mentioned, if the license key is not valid you will receive results with asterisks inside.
+
 ```swift
 private func createBarkoderConfig() {
-	// In order to perform scanning, config property need to be set before
-	// If license key is not valid you will receive results with asterisks inside
 	barkoderView.config = BarkoderConfig(licenseKey: "LICENSE_KEY") { licenseResult in print("Licensing SDK: \(licenseResult)") }
 
 	// Enable QR barcode type
@@ -83,6 +89,7 @@ And finally start the scanning process:
 ```plaintext
 try? barkoderView.startScanning(self)
 ```
+
 
 Find out more:
 
