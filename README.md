@@ -49,7 +49,7 @@ class ViewController: UIViewController {
 
 ## Licensing
 
-The SDK will scan barcodes even without a license, however, certain characters will be marked with asterisks. To avoid this you can create a trial license or even a production license. Follow [barkoder.com/register](https://barkoder.com/register/ref=github) and create a trial license today.
+The SDK will scan barcodes even without a license, however, certain characters will be marked with asterisks. To avoid this you can create a trial license or even a production license. Follow [barkoder.com/register](https://barkoder.com/register?ref=github) and create a trial license today.
 
 
 ## Create Barkoder Config
