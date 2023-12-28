@@ -63,6 +63,9 @@ import _SwiftConcurrencyShims
 extension UIKit.UIImage {
   public func fixOrientation() -> UIKit.UIImage
 }
+@objc public protocol BarkoderPerformanceDelegate {
+  @objc optional func performanceReceived(fps: Swift.Float, dps: Swift.Float)
+}
 @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc @_Concurrency.MainActor(unsafe) public class BarkoderView : UIKit.UIView, BarkoderSDK.BarkoderPreviewFramesDelegate {
   @objc public enum BarkoderResolution : Swift.Int {
     case normal
@@ -80,6 +83,7 @@ extension UIKit.UIImage {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @objc @_Concurrency.MainActor(unsafe) public func startCamera()
   @objc @_Concurrency.MainActor(unsafe) public func setPreviewFramesDelegate(_ delegate: (any BarkoderSDK.BarkoderPreviewFramesDelegate)?)
+  @objc @_Concurrency.MainActor(unsafe) public func setBarkoderPerformanceDelegate(_ delegate: (any BarkoderSDK.BarkoderPerformanceDelegate)?)
   @objc @_Concurrency.MainActor(unsafe) public func startScanning(_ resultDelegate: any BarkoderSDK.BarkoderResultDelegate) throws
   @objc @_Concurrency.MainActor(unsafe) public func stopScanning()
   @objc @_Concurrency.MainActor(unsafe) public func pauseScanning()
@@ -112,6 +116,7 @@ extension CoreFoundation.CGRect {
     case industrial_1d
     case all_2d
     case dpm
+    case vin
     public init?(rawValue: Swift.Int)
     public typealias RawValue = Swift.Int
     public var rawValue: Swift.Int {

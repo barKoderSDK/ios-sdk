@@ -392,8 +392,9 @@ typedef enum {
 @property (nonatomic, readwrite) Formatting formatting;
 @property (nonatomic, readwrite) int maximumResultsCount;
 @property (nonatomic, readwrite) int duplicatesDelayMs;
-@property (nonatomic, readwrite) int upcEanDeblur;
-@property (nonatomic, readwrite) int enableMisshaped1D;
+@property (nonatomic, readwrite) bool upcEanDeblur;
+@property (nonatomic, readwrite) bool enableMisshaped1D;
+@property (nonatomic, readwrite) bool enableVINRestrictions;
 
 
 -(void)setEnabledDecoders:(NSArray* _Nonnull)decoders;
@@ -469,6 +470,7 @@ typedef enum {
 //==========================================================================
 @interface iBarkoder : NSObject
 +(NSString *) GetLibVersion;
++(bool) IsDecoderBusy;
 +(NSArray<DecoderResult*>*)decodeImageInMemory:(Config*)config imagePixels:(uint8_t*)pixels imageWidth:(int)width imageHeight:(int) height;
 +(int) decodeImageAsync:(Config*)config image: (Image*) image callback:(void (^)(NSArray<DecoderResult*>*, Image*)) callback;
 +(int) decodeSampleBufferAsync:(Config*)config sampleBuffer:(CMSampleBufferRef)sampleBuffer callback:(void (^)(NSArray<DecoderResult*>*, CMSampleBufferRef)) callback;

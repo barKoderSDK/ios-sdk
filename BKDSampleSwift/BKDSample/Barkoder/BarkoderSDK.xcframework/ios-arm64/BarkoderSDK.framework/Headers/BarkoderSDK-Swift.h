@@ -439,7 +439,15 @@ typedef SWIFT_ENUM(NSInteger, BarkoderConfigTemplate, open) {
   BarkoderConfigTemplateIndustrial_1d = 4,
   BarkoderConfigTemplateAll_2d = 5,
   BarkoderConfigTemplateDpm = 6,
+  BarkoderConfigTemplateVin = 7,
 };
+
+
+SWIFT_PROTOCOL("_TtP11BarkoderSDK27BarkoderPerformanceDelegate_")
+@protocol BarkoderPerformanceDelegate
+@optional
+- (void)performanceReceivedWithFps:(float)fps dps:(float)dps;
+@end
 
 
 SWIFT_PROTOCOL("_TtP11BarkoderSDK29BarkoderPreviewFramesDelegate_")
@@ -465,6 +473,10 @@ SWIFT_CLASS("_TtC11BarkoderSDK12BarkoderView")
 /// Start the camera preview only, without decoding
 - (void)startCamera;
 - (void)setPreviewFramesDelegate:(id <BarkoderPreviewFramesDelegate> _Nullable)delegate;
+/// Set callback for getting fps and dps for checking performance
+/// \param delegate Callback which return fps and dps as Float
+///
+- (void)setBarkoderPerformanceDelegate:(id <BarkoderPerformanceDelegate> _Nullable)delegate;
 /// Turn flash ON/OFF
 /// If preview session is already active this state be set only for active session
 /// otherwise the initial flash state is set. Every next preview session will be started with this state
