@@ -549,6 +549,6 @@ Export config that is send as input param to JSON string
 
 Find out more:
 
-[~SwiftUI~](https://developer.apple.com/tutorials/app-dev-training) 
-[~Human~ ~Interface~ ~Guidelines~](https://developer.apple.com/design/human-interface-guidelines/) 
-[~Swift~ ~and~ ~SwiftUI~](https://blog.timac.org/2022/1005-state-of-swift-and-swiftui-ios16/)
+[SwiftUI](https://developer.apple.com/tutorials/app-dev-training) 
+[Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/) 
+[Swift and SwiftUI](https://blog.timac.org/2022/1005-state-of-swift-and-swiftui-ios16/)
