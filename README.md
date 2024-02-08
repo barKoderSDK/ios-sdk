@@ -177,8 +177,8 @@ Setting it manually:
         barkoderView.config?.decoderConfig?.qr.enabled = true
 
         // For best result decoding speed should be slow, and barkoder resolution should be high
-        barkoderView.config?.decoderConfig?.decodingSpeed = DecodingSpeed.init(2)
-        barkoderView.config?.barkoderResolution = .high
+        barkoderView.config?.decoderConfig?.decodingSpeed = DecodingSpeed.init(1)
+        barkoderView.config?.barkoderResolution = .normal
 
         // Setting ROI
         let vinRoiRect = CGRect(x: 0, y: 35, width: 100, height: 30)
