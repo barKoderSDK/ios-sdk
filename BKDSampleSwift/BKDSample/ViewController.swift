@@ -131,8 +131,8 @@ final class ViewController: UIViewController {
 extension ViewController: BarkoderResultDelegate {
 
     func scanningFinished(_ decoderResults: [DecoderResult], thumbnails: [UIImage]?, image: UIImage?) {
-        if let decoderResult = decoderResults.first {
-            showResult(decoderResult, image: image)
+        if let decoderResult = decoderResults.first, let thumbnail = thumbnails?.first {
+            showResult(decoderResult, image: image, thumbnail: thumbnail)
         }
         
         scanningInProcess = false
@@ -144,7 +144,7 @@ extension ViewController: BarkoderResultDelegate {
 
 private extension ViewController {
     
-    private func showResult(_ decoderResult: DecoderResult, image: UIImage?) {
+    private func showResult(_ decoderResult: DecoderResult, image: UIImage?, thumbnail: UIImage?) {
         resultImageView.image = image
 
         typeResultLabel.text = decoderResult.barcodeTypeName
