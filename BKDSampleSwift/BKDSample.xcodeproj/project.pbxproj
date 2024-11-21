@@ -36,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		AF3D11092A7BD5B200F80BAB /* BarkoderSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BarkoderSDK.xcframework; path = ../../../framework/BarkoderSDK.xcframework; sourceTree = "<group>"; };
-		AF4F23992A7BA96700216C54 /* Barkoder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = Barkoder.xcframework; sourceTree = "<group>"; };
+		AF4F23992A7BA96700216C54 /* Barkoder.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Barkoder.xcframework; path = ../../../framework/Barkoder.xcframework; sourceTree = "<group>"; };
 		EE337E56293BCEFE006A127A /* BKDSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BKDSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE337E59293BCEFE006A127A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE337E5B293BCEFE006A127A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
