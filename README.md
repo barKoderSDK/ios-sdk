@@ -4,13 +4,13 @@ Please follow these simple steps to integrate our SDK into your [iOS](https://de
 
 ## Create a new group 
 Name the group “**frameworks**”. The name is optional, you can use whichever label you want
-				![picture1.png](https://docs.barkoder.com/picture1.png)
+				![picture1.png](https://barkoder.com/uploads/images/original/picture1.png)
 ## Add **Barkoder.xcframework** and **BarkoderSDK.xcframework** 
 Add these items into frameworks  (*\*Copy items if needed, Create groups and Add to desired targets*)
-		![picture2.png](https://docs.barkoder.com/picture2.png)
+		![picture2.png](https://barkoder.com/uploads/images/original/picture2.png)
 ## Enable Bitcode (set it to NO)  
 In **Build Settings** set the Enable Bitcode to **NO** like shown on the image
-		![picture3.png](https://docs.barkoder.com/picture3.png)
+		![picture3.png](https://barkoder.com/uploads/images/original/picture3.png)
 ## Update Info.plist
 Open the **Info.plist** with Source Code and add these changes:
 ```plaintext
@@ -18,7 +18,7 @@ Open the **Info.plist** with Source Code and add these changes:
 <string>BKD Scanner requires using camera</string>
 ```
 ***Or using Property List add “Privacy - Camera Usage Description” and key "BKD Scanner requires using camera”***
-		![picture4.png](https://docs.barkoder.com/picture4.png)
+		![picture4.png](https://barkoder.com/uploads/images/original/picture4.png)
     
 ## Add **BarkoderView** as a view
 
