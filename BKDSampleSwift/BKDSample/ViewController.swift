@@ -106,6 +106,7 @@ final class ViewController: UIViewController {
         config.locationInImageResultEnabled = true
         config.regionOfInterestVisible = true
         config.pinchToZoomEnabled = true
+        config.barkoderResolution = .FHD
         try? config.setRegionOfInterest(CGRect(x: 5, y: 5, width: 90, height: 90))
     }
         
